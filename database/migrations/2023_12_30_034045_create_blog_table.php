@@ -21,7 +21,6 @@ return new class extends Migration
             $table->dateTime("updatedAt");
             $table->bigInteger("createdBy");
             $table->bigInteger("updatedBy");
-            $table->timestamps();
             $table->string("status");
         });
         Schema::table('blog', function (Blueprint $table) {

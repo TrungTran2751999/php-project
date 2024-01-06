@@ -16,15 +16,25 @@ use App\Http\Controllers\AdminController;
 */
 Route::prefix('/admin')->group(function(){
     Route::get('/', [AdminController::class,'index']);
+    
     Route::prefix('/tournament')->group(function(){
         Route::get("/chua-duyet",[AdminController::class,'tournamentChuaDuyet']);
         Route::get("/da-duyet",[AdminController::class,'tournamentDaDuyet']);
     });
+
+    Route::prefix('/category')->group(function(){
+        Route::get('/', [AdminController::class,'category']);
+        Route::get('/create', [AdminController::class,'createCategory']);
+        Route::get('/update', [AdminController::class,'updateCategory']);
+    });
+
+    Route::prefix('/organizer')->group(function(){
+        Route::get('/', [AdminController::class,'organizer']);
+        Route::get('/create', [AdminController::class,'createOrganizer']);
+        Route::get('/update', [AdminController::class,'updateOrganizer']);
+    });
 });
 
-Route::get('/', function (Request $request) {
-    return view("welcome");
-});
 
 // Route::prefix('about')->group(function(){
 //     Route::get("/",[AboutController::class, 'index']);

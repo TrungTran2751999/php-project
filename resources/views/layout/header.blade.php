@@ -54,7 +54,8 @@
         font-weight: bold
       }
       .table thead th, .table tbody td{
-        padding: 0px
+        padding: 0px;
+        text-align: center;
       }
-    </style>
+      </style>
   </head>

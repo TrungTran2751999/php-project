@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\CategoriesController;
 use App\Http\Controllers\Api\TournamentApi;
 use App\Http\Controllers\Api\CategoryApi;
+use App\Http\Controllers\Api\OrganizerApi;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -40,13 +41,22 @@ Route::get("/users",[UserController::class,'getAll'])->middleware('role:admin,us
 //     Route::post("/",[CategoriesController::class,'create']);
 //     Route::put("/{id}",[CategoriesController::class,'update']);
 // })->middleware('role:admin');
+// ==============CATEGORY==============
 Route::prefix("/category")->group(function(){
     Route::get("/",[CategoryApi::class,'getAll']);
+    Route::get("/{id}",[CategoryApi::class,'getById']);
+
     Route::post("/",[CategoryApi::class,'create']);
-    Route::post("/upload",[CategoryApi::class,'upload']);
-    Route::post("/delete",[CategoryApi::class,'delete']);
-    Route::post("/youtube",[CategoryApi::class,'youtube']);
- });
+    Route::post("/update",[CategoryApi::class,'update']);
+});
+// ==============ORGANIZER==============
+Route::prefix("/organizer")->group(function(){
+    Route::get("/",[OrganizerApi::class,'getAll']);
+    Route::get("/{id}",[OrganizerApi::class,'getById']);
+
+    Route::post("/",[OrganizerApi::class,'create']);
+    Route::post("/update",[OrganizerApi::class,'update']);
+});
 Route::prefix("/tournament")->group(function(){
    Route::get("/",[TournamentApi::class,'getAll']);
 });

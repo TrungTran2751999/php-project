@@ -26,7 +26,7 @@
 
 <script>
     // let host = "http://192.168.0.15:5221";
-    let host = "http://localhost:5221";
+    let host = "http://127.0.0.1:8000";
 </script>
 <script>
     function convertDateTime(isoTime, time){

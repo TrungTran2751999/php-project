@@ -5,6 +5,7 @@
       <nav class="sidebar-nav">
         <ul id="sidebarnav" class="pt-4">
           <li class="sidebar-item">
+            {{-- TOURNAMENT --}}
             <a
               class="sidebar-link has-arrow waves-effect waves-dark"
               href="javascript:void(0)"
@@ -23,6 +24,54 @@
                 <a href="/admin/tournament/chua-duyet" class="sidebar-link"
                   ><i class="mdi mdi-note-plus"></i
                   ><span class="hide-menu"> Chưa duyệt</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          {{-- CATEGORY --}}
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link has-arrow waves-effect waves-dark"
+              href="javascript:void(0)"
+              aria-expanded="false"
+              ><i class="mdi mdi-arrange-bring-forward"></i
+              ><span class="hide-menu">Category</span></a
+            >
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="/admin/category" class="sidebar-link"
+                  ><i class="mdi mdi-note-outline"></i
+                  ><span class="hide-menu"> Danh sách category </span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="/admin/category/create" class="sidebar-link"
+                  ><i class="mdi mdi-note-plus"></i
+                  ><span class="hide-menu"> Tạo mới category </span></a
+                >
+              </li>
+            </ul>
+          </li>
+          {{-- ORGANIZER --}}
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link has-arrow waves-effect waves-dark"
+              href="javascript:void(0)"
+              aria-expanded="false"
+              ><i class="mdi mdi-library"></i
+              ><span class="hide-menu">Organizer</span></a
+            >
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="/admin/organizer" class="sidebar-link"
+                  ><i class="mdi mdi-note-outline"></i
+                  ><span class="hide-menu"> Danh sách organizer </span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="/admin/organizer/create" class="sidebar-link"
+                  ><i class="mdi mdi-note-plus"></i
+                  ><span class="hide-menu"> Tạo mới organizer </span></a
                 >
               </li>
             </ul>
