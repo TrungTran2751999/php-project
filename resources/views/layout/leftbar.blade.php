@@ -76,6 +76,30 @@
               </li>
             </ul>
           </li>
+          {{-- USER --}}
+          <li class="sidebar-item">
+            <a
+              class="sidebar-link has-arrow waves-effect waves-dark"
+              href="javascript:void(0)"
+              aria-expanded="false"
+              ><i class="mdi mdi-library"></i
+              ><span class="hide-menu">User</span></a
+            >
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="/admin/user" class="sidebar-link"
+                  ><i class="mdi mdi-note-outline"></i
+                  ><span class="hide-menu"> Danh sách user </span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="/admin/user/create" class="sidebar-link"
+                  ><i class="mdi mdi-note-plus"></i
+                  ><span class="hide-menu"> Tạo mới user </span></a
+                >
+              </li>
+            </ul>
+          </li>
           {{-- <li class="sidebar-item">
             <a
               class="sidebar-link waves-effect waves-dark sidebar-link"

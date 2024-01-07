@@ -12,7 +12,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "madcoda/php-youtube-api": "^1.2",
-        "nao-pon/flysystem-google-drive": "~1.1"
+        "nao-pon/flysystem-google-drive": "~1.1",
+        "tymon/jwt-auth": "^1.0@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

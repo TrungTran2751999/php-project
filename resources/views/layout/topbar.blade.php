@@ -146,25 +146,17 @@
                     aria-labelledby="navbarDropdown"
                   >
                     <a class="dropdown-item" href="javascript:void(0)"
-                      ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
+                      ><i class="mdi mdi-settings me-1 ms-1"></i>Profile</a
                     >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      ><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a
+                    <a class="dropdown-item" href="" onclick="logout()"
+                      ><i class="fa fa-power-off me-1 ms-1"></i> Log out</a
                     >
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      ><i class="mdi mdi-email me-1 ms-1"></i> Inbox</a
-                    >
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="javascript:void(0)"
-                      ><i class="mdi mdi-settings me-1 ms-1"></i> Account
-                      Setting</a
-                    > 
                      <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/tai-khoan-ca-nhan"
                       ><i class="mdi mdi-settings me-1 ms-1"></i> Tài khoản</a
                     >
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/api/logout"
+                    <a class="dropdown-item" href=""
                       ><i class="fa fa-power-off me-1 ms-1"></i> Đăng xuất</a
                     >
                     <div class="dropdown-divider"></div>
@@ -332,6 +324,7 @@
               </ul>
             </div>
           </nav>
+          
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->

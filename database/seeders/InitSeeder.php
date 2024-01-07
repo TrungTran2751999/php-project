@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Str;
 
 class InitSeeder extends Seeder
 {
@@ -42,6 +43,7 @@ class InitSeeder extends Seeder
         $user = new User();
         $user->id = 1;
         $user->name = 'user';
+        $user->guid = Str::uuid()->toString();
         $user->userName = 'user';
         $user->email = 'user@gmail.com';
         $user->password = Hash::make('123456');

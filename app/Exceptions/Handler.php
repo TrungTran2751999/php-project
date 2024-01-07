@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -37,5 +38,14 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof JWTException) {
+            // Xử lý ngoại lệ JWTException cụ thể ở đây
+            return response("Unauthorized",400);
+        }
+
+        return parent::render($request, $exception);
     }
 }

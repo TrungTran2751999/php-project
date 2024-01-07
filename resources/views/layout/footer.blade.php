@@ -71,4 +71,12 @@
         }
         return decodeURIComponent(cookieValue.substring(cookieStart, cookieEnd));
     }
+    function logout(){
+		$.ajax({
+		    url: host + "/api/user/logout"
+		})
+        .done(()=>{
+            window.location.href = "/admin/login";
+        })
+	}
 </script>
